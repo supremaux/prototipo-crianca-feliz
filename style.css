@@ -1,0 +1,49 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: #fff9f0;
+}
+.fade-transition {
+  transition: opacity 0.2s ease-in-out;
+}
+.btn-whatsapp {
+  transition: all 0.2s ease;
+}
+.btn-whatsapp:active {
+  transform: scale(0.97);
+}
+html {
+  scroll-behavior: smooth;
+}
+.size-option {
+  transition: all 0.1s ease;
+}
+.size-option:active {
+  background-color: #fde047;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+/* Toast notification */
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+}

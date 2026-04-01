@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="robots"
+      content="noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 cache"
+    />
+    <title>Criança Feliz | Moda Infantil - Campo Grande, MS</title>
+
+    <!-- Open Graph tags para rich snippet (serão atualizadas dinamicamente) -->
+    <meta
+      property="og:title"
+      content="Criança Feliz - Moda Infantil"
+      id="ogTitle"
+    />
+    <meta
+      property="og:description"
+      content="Descubra a melhor moda infantil em Campo Grande, MS"
+      id="ogDescription"
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=500&h=500&fit=crop"
+      id="ogImage"
+    />
+    <meta property="og:url" content="https://criancafeliz.com.br" id="ogUrl" />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="Criança Feliz" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="antialiased">
+    <!-- HEADER com logotipo, menu simples e endereço -->
+    <header
+      class="sticky top-0 z-20 bg-gradient-to-r from-rose-100 via-pink-50 to-yellow-50 shadow-sm border-b border-rose-200/50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2"
+      >
+        <!-- Logo e nome -->
+        <div class="flex items-center gap-2">
+          <div class="bg-rose-200 p-1.5 rounded-full shadow-sm">
+            <i data-lucide="baby" class="w-6 h-6 text-rose-500"></i>
+          </div>
+          <h1
+            class="text-xl sm:text-2xl font-bold tracking-tight bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent"
+          >
+            Criança Feliz
+          </h1>
+        </div>
+
+        <!-- Menu simples (links de navegação interna) -->
+        <nav class="flex gap-3 sm:gap-5 text-sm font-medium">
+          <button
+            id="navHomeBtn"
+            class="text-stone-700 hover:text-rose-500 transition flex items-center gap-1"
+          >
+            <i data-lucide="home" class="w-4 h-4"></i><span>Início</span>
+          </button>
+          <button
+            id="navCatalogBtn"
+            class="text-stone-700 hover:text-rose-500 transition flex items-center gap-1"
+          >
+            <i data-lucide="grid-3x3" class="w-4 h-4"></i><span>Catálogo</span>
+          </button>
+          <a
+            href="#"
+            class="text-stone-700 hover:text-rose-500 transition flex items-center gap-1"
+            ><i data-lucide="phone" class="w-4 h-4"></i><span>Contato</span></a
+          >
+        </nav>
+
+        <!-- Endereço com ícone -->
+        <div
+          class="flex items-center gap-1.5 text-xs sm:text-sm bg-white/60 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm"
+        >
+          <i data-lucide="map-pin" class="w-4 h-4 text-rose-400"></i>
+          <span class="text-stone-700 font-medium"
+            >Avenida dos Cafezais, 1506</span
+          >
+          <span class="hidden sm:inline text-rose-400">•</span>
+          <span class="hidden sm:inline text-stone-500">Campo Grande - MS</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-8">
+      <!-- ==================== VITRINE / GRID DE PRODUTOS ==================== -->
+      <div id="productsGridSection" class="transition-all duration-300">
+        <div class="flex justify-between items-center mb-6 flex-wrap gap-2">
+          <h2 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-6 h-6 text-amber-400"></i>
+            Descubra o encanto
+          </h2>
+          <p class="text-stone-500 text-sm bg-white/60 px-3 py-1 rounded-full">
+            8 produtos especiais
+          </p>
+        </div>
+        <div
+          id="productGridContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 auto-rows-fr"
+        >
+          <!-- Cards serão injetados via JS -->
+        </div>
+      </div>
+
+      <!-- ==================== PÁGINA DE DETALHES (SIMULA NOVA PÁGINA) ==================== -->
+      <div id="productDetailSection" class="hidden transition-all duration-300">
+        <div
+          class="bg-white rounded-2xl shadow-xl overflow-hidden border border-rose-100"
+        >
+          <!-- Botão voltar + cabeçalho -->
+          <div
+            class="p-4 sm:p-5 border-b border-rose-100 bg-gradient-to-r from-rose-50 to-yellow-50 flex items-center gap-3 flex-wrap"
+          >
+            <button
+              id="backToGridBtn"
+              class="flex items-center gap-2 bg-white hover:bg-rose-50 text-stone-700 font-medium px-4 py-2 rounded-full transition shadow-sm border border-rose-200"
+            >
+              <i data-lucide="arrow-left" class="w-5 h-5"></i> Voltar à vitrine
+            </button>
+            <div class="ml-auto text-xs text-stone-500 flex items-center gap-1">
+              <i data-lucide="heart" class="w-4 h-4 text-rose-400"></i>
+              <span>Escolha com carinho</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo do detalhe do produto (dinâmico) -->
+          <div id="dynamicDetailContent" class="p-5 sm:p-6 md:p-8">
+            <!-- preenchido pelo JS -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Toast notification -->
+    <div id="toastNotification" class="toast-notification">
+      ✨ Link copiado! Enviando mensagem...
+    </div>
+
+    <!-- Footer simples, confiança -->
+    <footer
+      class="border-t border-rose-100 mt-12 py-6 text-center text-stone-400 text-xs bg-white/40"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <p>© 2025 Criança Feliz - Moda infantil com alegria e conforto 💛</p>
+        <p class="flex gap-3">
+          <span>CNPJ: 12.345.678/0001-99</span><span>|</span
+          ><span>Atendimento: (67) 99133-8297</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Folha de estilo e scripts externos (CDN) para fontes, Tailwind e ícones  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Funções e scripts JS  -->
+    <script type="module" src="./main.js" async></script>
+
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS via CDN (v3) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </body>
+</html>
